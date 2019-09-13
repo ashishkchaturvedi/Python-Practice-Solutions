@@ -3,8 +3,8 @@ Created on Sep 12, 2019
 
 @author: achaturvedi
 '''
-def greet_user():
+def greet_user(username):
     """Display a simple greeting"""
-    print("hello!")
+    print("Hello "+ username.title() +"!")
     
-greet_user()
+greet_user('ashish')

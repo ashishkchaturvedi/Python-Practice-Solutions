@@ -3,31 +3,33 @@ Created on Sep 14, 2019
 
 @author: achaturvedi
 '''
-from builtins import str
-class Car():
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.odometer_reading = 23
+
+from Chapter9_classes import car
+# from builtins import str
+# class Car():
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.odometer_reading = 23
+#         
+#     def get_descriptive_name(self):
+#         long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+#         return long_name.title()
+#     
+#     def read_odometer(self):
+#         print("This car has " + str(self.odometer_reading) + " miles on it.")
+#         
+#     def increment_odometer(self, miles):
+#         self.odometer_reading += miles
+#         
+#     def update_odometer(self, mileage):
+#         if mileage >= self.odometer_reading:
+#             self.odometer_reading = mileage
+#         else:
+#             print("You can't roll back the value")
         
-    def get_descriptive_name(self):
-        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
-        return long_name.title()
-    
-    def read_odometer(self):
-        print("This car has " + str(self.odometer_reading) + " miles on it.")
-        
-    def increment_odometer(self, miles):
-        self.odometer_reading += miles
-        
-    def update_odometer(self, mileage):
-        if mileage >= self.odometer_reading:
-            self.odometer_reading = mileage
-        else:
-            print("You can't roll back the value")
-        
-class ElectricCar(Car):
+class ElectricCar(car.Car):
     
     def __init__(self, make, model, year):
 #         self.battery_size = 70
@@ -66,12 +68,12 @@ my_tesla = ElectricCar('tesla', 'model s' , '2019')
 
 new_car = my_tesla.get_descriptive_name()
 
-print(new_car)
+#print(new_car)
 
 # my_tesla.describe_battery()
 
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
-my_tesla.battery.upgrade_battery()
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
+# my_tesla.battery.describe_battery()
+# my_tesla.battery.get_range()
+# my_tesla.battery.upgrade_battery()
+# my_tesla.battery.describe_battery()
+# my_tesla.battery.get_range()

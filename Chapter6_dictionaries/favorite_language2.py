@@ -4,6 +4,7 @@ Created on Sep 9, 2019
 @author: achaturvedi
 '''
 favorite_languages = {
+    'Kesari' : ['Scala'],
     'Amit' : ['python', 'ruby'],
     'Modi' : ['c', 'c++'],
     'Arvind' : ['java'],

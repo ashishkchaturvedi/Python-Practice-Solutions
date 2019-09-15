@@ -30,21 +30,21 @@ class Car():
 class ElectricCar(Car):
     
     def __init__(self, make, model, year):
-        self.battery_size = 70
+#         self.battery_size = 70
         
         super().__init__(make, model, year)
-        self.battery = Battery(85)
+        self.battery = Battery()
         
-    '''def describe_battery(self):
-        print("This car has a " +str(self.battery_size) + "-kWh battery.")'''
+#     def describe_battery(self):
+#         print("This car has a " +str(self.battery_size) + "-kWh battery.")
         
         
 class Battery():
-    def __init__(self, battery_size):
+    def __init__(self, battery_size = 70):
         self.battery_size = battery_size
         
     def describe_battery(self):
-        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+        print("\nThis car has a " + str(self.battery_size) + "-kWh battery.")
         
     def get_range(self):
         
@@ -57,13 +57,21 @@ class Battery():
     
         print(message)
         
+    def upgrade_battery(self):
+        
+        if self.battery_size < 85:
+            self.battery_size = 85
+        
 my_tesla = ElectricCar('tesla', 'model s' , '2019')
 
 new_car = my_tesla.get_descriptive_name()
 
 print(new_car)
 
-#my_tesla.describe_battery()
+# my_tesla.describe_battery()
 
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+my_tesla.battery.upgrade_battery()
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
